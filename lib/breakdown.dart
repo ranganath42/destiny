@@ -11,29 +11,34 @@ List<StoryFrame> frameList = [
         'Your car has blown a tire on a winding road in the middle of nowhere with no cell phone reception. '
         'You decide to hitchhike. A rusty pickup truck rumbles to a stop next to you. '
         'A man with a wide brimmed hat with soulless eyes opens the passenger door for you and asks: "Need a ride, boy?".',
-    first: Choice(text: 'I\'ll hop in. Thanks for the help!', nextFrame: 1),
-    second:
-        Choice(text: 'Better ask him if he\'s a murderer first.', nextFrame: 1),
+    choices: <Choice>[
+      Choice(text: 'I\'ll hop in. Thanks for the help!', nextFrame: 2),
+      Choice(text: 'Better ask him if he\'s a murderer first.', nextFrame: 1),
+    ],
   ),
   StoryFrame(
     number: 1,
     text: 'He nods slowly, unphased by the question.',
-    first: Choice(text: 'At least he\'s honest. I\'ll climb in.', nextFrame: 1),
-    second: Choice(text: 'Wait, I know how to change a tire.', nextFrame: 1),
+    choices: <Choice>[
+      Choice(text: 'At least he\'s honest. I\'ll climb in.', nextFrame: 2),
+      Choice(text: 'Wait, I know how to change a tire.', nextFrame: 3),
+    ],
   ),
   StoryFrame(
-    number: 2,
-    text:
-        'As you begin to drive, the stranger starts talking about his relationship with his mother. '
-        'He gets angrier and angrier by the minute. He asks you to open the glovebox. '
-        'Inside you find a bloody knife, two severed fingers, and a cassette tape of Elton John. '
-        'He reaches for the glove box.',
-    first: Choice(
-        text: 'I love Elton John! Hand him the cassette tape..', nextFrame: 1),
-    second: Choice(
-        text: 'It\'s him or me! You take the knife and stab him.',
-        nextFrame: 1),
-  ),
+      number: 2,
+      text:
+          'As you begin to drive, the stranger starts talking about his relationship with his mother. '
+          'He gets angrier and angrier by the minute. He asks you to open the glovebox. '
+          'Inside you find a bloody knife, two severed fingers, and a cassette tape of Elton John. '
+          'He reaches for the glove box.',
+      choices: <Choice>[
+        Choice(
+            text: 'I love Elton John! Hand him the cassette tape..',
+            nextFrame: 5),
+        Choice(
+            text: 'It\'s him or me! You take the knife and stab him.',
+            nextFrame: 4),
+      ]),
   StoryFrame(
     number: 3,
     text:
@@ -47,7 +52,7 @@ List<StoryFrame> frameList = [
         'stabbing someone while they are driving a car you are in.',
   ),
   StoryFrame(
-    number: 3,
+    number: 5,
     text:
         'You bond with the murderer while crooning verses of "Can you feel the love tonight". '
         'He drops you off at the next town. '

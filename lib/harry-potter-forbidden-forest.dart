@@ -8,6 +8,8 @@ Story harryPotterForbiddenForest =
 StoryFrame f1 = StoryFrame(
   number: 1,
   text: 'sdfsfsdfsdf',
-  first: Choice(text: 'sdfsdf', nextFrame: 1),
-  second: Choice(text: 'sdfsdf', nextFrame: 1),
+  choices: <Choice>[
+    Choice(text: 'sdfsdf', nextFrame: 1),
+    Choice(text: 'sdfsdf', nextFrame: 1),
+  ],
 );
